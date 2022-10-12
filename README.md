@@ -1,7 +1,5 @@
 # IT705-HCI-Project
-
-# This is a web application for doing a note
-#The whole project is based on Vue2
+This is a web application for doing a note which is based on Vue2
 
 # Project setup
 npm install
