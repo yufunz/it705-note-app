@@ -51,7 +51,7 @@ export default {
 }
 
 #add {
-  color: greenyellow;
+  color: green;
 }
 
 #star {
