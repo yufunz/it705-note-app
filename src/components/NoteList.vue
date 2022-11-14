@@ -4,60 +4,75 @@
       <h2>Notes</h2>
 
       <div class="btn-group btn-group-justified" role="group">
-       
         <!-- All Notes button -->
         <div class="btn-group" role="group">
-          <button @click="show='all'" type="button" class="btn btn-default" v-bind:class="{active:show=='all'}">
+          <button
+            @click="show = 'all'"
+            type="button"
+            class="btn btn-default"
+            v-bind:class="{ active: show == 'all' }"
+          >
             All Notes
           </button>
         </div>
-       
+
         <!-- Favorites Button -->
         <div class="btn-group" role="group">
-          <button @click="show='favorites'" type="button" class="btn btn-default" v-bind:class="{active:show=='favorites'}">
+          <button
+            @click="show = 'favorites'"
+            type="button"
+            class="btn btn-default"
+            v-bind:class="{ active: show == 'favorites' }"
+          >
             Favorites
           </button>
         </div>
       </div>
     </div>
-    
+
     <!-- render notes in a list -->
     <div class="container">
       <div class="list-group">
-        <a v-for="item in notes" class="list-group-item" v-bind:class="{active:activeNote == item}" v-on:click="updateActiveNote(item)" href="#">
+        <a
+          v-for="(item, index) in notes"
+          class="list-group-item"
+          v-bind:class="{ active: activeNote == item }"
+          v-bind:key="index"
+          v-on:click="updateActiveNote(item)"
+          href="#"
+        >
           <h4 class="list-group-item-heading">
-            {{item.text}}
+            {{ item.text }}
           </h4>
         </a>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      show:'all'
+      show: "all"
     }
   },
-  computed:{
-    notes(){
-      if (this.show=='all'){
+  computed: {
+    notes() {
+      if (this.show == "all") {
         return this.$store.getters.notes
-      }else if(this.show=='favorites'){
-        return this.$store.getters.notes.filter(note=>note.favorite)
+      } else if (this.show == "favorites") {
+        return this.$store.getters.notes.filter((note) => note.favorite)
       }
     },
-    activeNote(){
+    activeNote() {
       return this.$store.getters.activeNote
     }
   },
-  methods:{
-    updateActiveNote(note){
+  methods: {
+    updateActiveNote(note) {
       console.log(note)
-      this.$store.dispatch('updateActiveNote',note)
+      this.$store.dispatch("updateActiveNote", note)
     }
   }
 }
@@ -67,8 +82,8 @@ export default {
   float: left;
   width: 300px;
   height: 100%;
-  background-color: #F5F5F5;
-  font-family: 'Raleway', sans-serif;
+  background-color: #f5f5f5;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 
