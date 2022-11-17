@@ -43,7 +43,12 @@
           href="#"
         >
           <h4 class="list-group-item-heading">
-            {{ item.text }}
+            <i
+              class="el-icon-star-on"
+              v-if="item.favorite"
+              style="color: #d4ba01"
+            ></i
+            >{{ item.text }}
           </h4>
           <small>{{ item.timestamp }}</small>
         </a>

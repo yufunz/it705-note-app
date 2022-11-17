@@ -4,6 +4,7 @@
       v-bind:value="activeNoteText"
       v-on:input="editNote"
       class="form-control"
+      placeholder="Please click + or select an existing note."
       rows="55"
     ></textarea>
   </div>

@@ -22,7 +22,7 @@ const mutations = {
 				text:默认文字内容
 				favorite:收藏
 			*/
-      text: "New Note",
+      text: "",
       favorite: false,
       timestamp: new Date().toLocaleString("en-NZ")
     }
