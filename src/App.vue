@@ -3,11 +3,12 @@
     <toolbar></toolbar>
     <note-list></note-list>
     <el-container>
-      <el-main>
+      <el-main id="editor">
         <editor></editor>
       </el-main>
       <el-footer>
-        <widget></widget>
+        <calender id="calender"></calender>
+        <weather id="weather"></weather>
       </el-footer>
     </el-container>
   </div>
@@ -17,14 +18,16 @@
 import Toolbar from "./components/Toolbar"
 import NoteList from "./components/NoteList"
 import Editor from "./components/Editor"
-import Widget from "./components/Widget.vue"
+import Weather from "./components/Weather.vue"
+import Calender from "./components/Calender.vue"
 
 export default {
   components: {
     Toolbar,
     NoteList,
     Editor,
-    Widget
+    Weather,
+    Calender
   }
 }
 </script>
