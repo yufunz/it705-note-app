@@ -1,10 +1,10 @@
 <template>
-  <div id="note-editor" class="h-75">
+  <div id="note-editor">
     <textarea
       v-bind:value="activeNoteText"
       v-on:input="editNote"
       class="form-control"
-      rows="45"
+      rows="55"
     ></textarea>
   </div>
 </template>
@@ -19,6 +19,10 @@ export default {
   methods: {
     editNote(e) {
       this.$store.dispatch("editNote", e.target.value)
+      this.$store.dispatch(
+        "updateTimeStamp",
+        new Date().toLocaleString("en-NZ")
+      )
     }
   }
 }
