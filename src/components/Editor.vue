@@ -1,33 +1,40 @@
 <template>
-  <div id="note-editor">
-    <textarea v-bind:value="activeNoteText" v-on:input="editNote" class="form-control"></textarea>
+  <div id="note-editor" class="h-75">
+    <textarea
+      v-bind:value="activeNoteText"
+      v-on:input="editNote"
+      class="form-control"
+      rows="45"
+    ></textarea>
   </div>
 </template>
 
 <script>
 export default {
-  computed:{
-    activeNoteText(){
+  computed: {
+    activeNoteText() {
       return this.$store.getters.activeNote.text
     }
   },
-  methods:{
-  	editNote(e){
-  		this.$store.dispatch('editNote',e.target.value)
-  	}
+  methods: {
+    editNote(e) {
+      this.$store.dispatch("editNote", e.target.value)
+    }
   }
 }
 </script>
 
-<style type="text/css">  
+<style type="text/css">
 #note-editor {
-  height: 100%;
-  margin-left: 380px;
+  padding: 0;
 }
 
-#note-editor textarea {
+textarea {
+  resize: none;
   height: 100%;
-  border: 0;
-  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #017ba9;
 }
 </style>

@@ -1,26 +1,36 @@
 <template>
-  <div id="app"> 
+  <div id="app">
     <toolbar></toolbar>
-    <note-list></note-list> 
-    <editor></editor> 
+    <note-list></note-list>
+    <el-container>
+      <el-main height="90%">
+        <editor></editor>
+      </el-main>
+      <el-footer>
+        <widget></widget>
+      </el-footer>
+    </el-container>
   </div>
 </template>
 
 <script>
-import Toolbar from './components/Toolbar'
-import NoteList from './components/NoteList'
-import Editor from './components/Editor'
+import Toolbar from "./components/Toolbar"
+import NoteList from "./components/NoteList"
+import Editor from "./components/Editor"
+import Widget from "./components/Widget.vue"
 
 export default {
-  components:{
+  components: {
     Toolbar,
     NoteList,
-    Editor
+    Editor,
+    Widget
   }
 }
 </script>
 <style type="text/css">
-html, #app {
+html,
+#app {
   height: 100%;
 }
 

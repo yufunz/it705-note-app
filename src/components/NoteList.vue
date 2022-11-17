@@ -1,8 +1,9 @@
 <template>
   <div id="notes-list">
     <div id="list-header">
-      <h2>Notes</h2>
-
+      <div class="text-center">
+        <i class="brand el-icon-notebook-2"></i>
+      </div>
       <div class="btn-group btn-group-justified" role="group">
         <!-- All Notes button -->
         <div class="btn-group" role="group">
@@ -78,12 +79,18 @@ export default {
 }
 </script>
 <style type="text/css">
+.brand {
+  font-size: 100px;
+  margin: 20px 20px;
+  color: #003d54;
+}
+
 #notes-list {
   float: left;
   width: 300px;
   height: 100%;
   background-color: #f5f5f5;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
@@ -100,19 +107,21 @@ export default {
 }
 
 #notes-list .container {
-  height: calc(100% - 137px);
-  max-height: calc(100% - 137px);
   overflow: auto;
   width: 100%;
   padding: 0;
 }
 
 #notes-list .container .list-group-item {
-  border: 0;
   border-radius: 0;
 }
+
 .list-group-item-heading {
   font-weight: 300;
   font-size: 15px;
+}
+
+.list-group-item.active {
+  background-color: #017ba9;
 }
 </style>
