@@ -1,9 +1,10 @@
 <template>
-  <div id="note-editor">
+  <div id="note-editor" class="h-75">
     <textarea
       v-bind:value="activeNoteText"
       v-on:input="editNote"
       class="form-control"
+      rows="45"
     ></textarea>
   </div>
 </template>
@@ -23,4 +24,17 @@ export default {
 }
 </script>
 
-<style type="text/css"></style>
+<style type="text/css">
+#note-editor {
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+  height: 100%;
+}
+
+.form-control:focus {
+  border-color: #017ba9;
+}
+</style>

@@ -3,7 +3,7 @@
     <toolbar></toolbar>
     <note-list></note-list>
     <el-container>
-      <el-main>
+      <el-main height="90%">
         <editor></editor>
       </el-main>
       <el-footer>

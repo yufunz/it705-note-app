@@ -42,7 +42,7 @@ export default {
 }
 
 #toolbar i {
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 35px;
   margin-left: -5px;
   cursor: pointer;

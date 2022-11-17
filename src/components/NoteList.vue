@@ -90,7 +90,7 @@ export default {
   width: 300px;
   height: 100%;
   background-color: #f5f5f5;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
@@ -113,11 +113,15 @@ export default {
 }
 
 #notes-list .container .list-group-item {
-  border: 0;
   border-radius: 0;
 }
+
 .list-group-item-heading {
   font-weight: 300;
   font-size: 15px;
+}
+
+.list-group-item.active {
+  background-color: #017ba9;
 }
 </style>

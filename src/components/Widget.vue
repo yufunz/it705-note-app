@@ -1,5 +1,5 @@
 <template>
-  <div id="widget">
+  <div id="widget" class="fixed-bottom">
     <a
       id="weather"
       class="weatherwidget-io"
@@ -25,4 +25,8 @@
 })(document, "script", "weatherwidget-io-js")
 </script>
 
-<style type="text/css"></style>
+<style type="text/css">
+#weather {
+  border-radius: 5px;
+}
+</style>
