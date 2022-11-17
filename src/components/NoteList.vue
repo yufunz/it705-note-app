@@ -45,6 +45,7 @@
           <h4 class="list-group-item-heading">
             {{ item.text }}
           </h4>
+          <small>{{ item.timestamp }}</small>
         </a>
       </div>
     </div>

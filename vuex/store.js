@@ -10,6 +10,7 @@ const state = {
 		activeNote:当前正在编辑的note项
 	*/
   notes: [],
+  // timestamps: [],
   activeNote: {}
 }
 
@@ -22,7 +23,8 @@ const mutations = {
 				favorite:收藏
 			*/
       text: "New Note",
-      favorite: false
+      favorite: false,
+      timestamp: new Date().toLocaleString()
     }
 
     state.notes.push(newNote)
@@ -44,6 +46,15 @@ const mutations = {
       }
     }
     state.activeNote = state.notes[0]
+  },
+  /*
+  ADD_TIMESTAMP(state, payload) {
+    let newTimeStamp = payload
+    state.timestamps.push(newTimeStamp)
+  },
+  */
+  UPDATE_TIMESTAMP(state) {
+    state.activeNote.timestamp = new Date().toLocaleString()
   }
 }
 
@@ -72,6 +83,9 @@ const actions = {
   },
   deleteNote({ commit }) {
     commit("DELETE_NOTE")
+  },
+  updateTimeStamp({ commit }, timestamp) {
+    commit("UPDATE_TIMESTAMP", timestamp)
   }
 }
 const getters = {
@@ -84,6 +98,7 @@ const getters = {
 	*/
   notes: (state) => state.notes,
   activeNote: (state) => state.activeNote
+  //getTimestamps: (state) => state.timestamps
 }
 
 export default new Vuex.Store({
