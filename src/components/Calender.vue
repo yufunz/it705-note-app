@@ -30,12 +30,15 @@ const date = new Date()
 const year = date.getFullYear()
 const month = date.getMonth() + 1
 const day = date.getDate()
-const today = `${year}-${month}-${day}`
+const time = year + "-" + month
+//const today = `${year}-${month}-${day}`
+const today = year + "-" + month + "-" + day
 console.log(today)
 $(document).ready(function () {
   $(".responsive-calendar").responsiveCalendar({
     //time: "2022-11",
-    time: `${year}-${month}`,
+    //time: `${year}-${month}`,
+    time: time,
     events: {
       //"2022-11-18": {}
       [today]: {}
