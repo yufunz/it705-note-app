@@ -22,7 +22,7 @@ const mutations = {
 				text:默认文字内容
 				favorite:收藏
 			*/
-      text: "New Note",
+      text: "",
       favorite: false,
       timestamp: new Date().toLocaleString("en-NZ")
     }
@@ -97,7 +97,15 @@ const getters = {
 		}
 	*/
   notes: (state) => state.notes,
-  activeNote: (state) => state.activeNote
+  activeNote: (state) => state.activeNote,
+  getNoteCount: (state) => state.notes.length,
+  getFavNoteCount(state) {
+    let count = 0
+    for (let i = 0; i < state.notes.length; i++) {
+      if (state.notes[i].favorite) count++
+    }
+    return count
+  }
   //getTimestamps: (state) => state.timestamps
 }
 

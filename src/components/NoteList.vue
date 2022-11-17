@@ -13,7 +13,7 @@
             class="btn btn-default"
             v-bind:class="{ active: show == 'all' }"
           >
-            All Notes
+            All Notes <span class="badge">{{ noteCount }}</span>
           </button>
         </div>
 
@@ -25,7 +25,7 @@
             class="btn btn-default"
             v-bind:class="{ active: show == 'favorites' }"
           >
-            Favorites
+            Favorites <span class="badge">{{ favNoteCount }}</span>
           </button>
         </div>
       </div>
@@ -43,7 +43,12 @@
           href="#"
         >
           <h4 class="list-group-item-heading">
-            {{ item.text }}
+            <i
+              class="el-icon-star-on"
+              v-if="item.favorite"
+              style="color: #d4ba01"
+            ></i
+            >{{ item.text }}
           </h4>
           <small>{{ item.timestamp }}</small>
         </a>
@@ -69,6 +74,12 @@ export default {
     },
     activeNote() {
       return this.$store.getters.activeNote
+    },
+    noteCount() {
+      return this.$store.getters.getNoteCount
+    },
+    favNoteCount() {
+      return this.$store.getters.getFavNoteCount
     }
   },
   methods: {
