@@ -5,7 +5,7 @@
       v-on:input="editNote"
       class="form-control"
       placeholder="Please click + or select an existing note."
-      rows="30"
+      rows="15"
     ></textarea>
   </div>
 </template>
