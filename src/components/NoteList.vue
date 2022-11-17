@@ -1,8 +1,9 @@
 <template>
   <div id="notes-list">
     <div id="list-header">
-      <h2>Notes</h2>
-
+      <div class="text-center">
+        <i class="brand el-icon-notebook-2"></i>
+      </div>
       <div class="btn-group btn-group-justified" role="group">
         <!-- All Notes button -->
         <div class="btn-group" role="group">
@@ -78,6 +79,11 @@ export default {
 }
 </script>
 <style type="text/css">
+.brand {
+  font-size: 100px;
+  margin: 20px 20px;
+}
+
 #notes-list {
   float: left;
   width: 300px;
@@ -100,8 +106,6 @@ export default {
 }
 
 #notes-list .container {
-  height: calc(100% - 137px);
-  max-height: calc(100% - 137px);
   overflow: auto;
   width: 100%;
   padding: 0;
