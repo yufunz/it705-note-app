@@ -24,7 +24,7 @@ const mutations = {
 			*/
       text: "New Note",
       favorite: false,
-      timestamp: new Date().toLocaleString()
+      timestamp: new Date().toLocaleString("en-NZ")
     }
 
     state.notes.push(newNote)
@@ -54,7 +54,7 @@ const mutations = {
   },
   */
   UPDATE_TIMESTAMP(state) {
-    state.activeNote.timestamp = new Date().toLocaleString()
+    state.activeNote.timestamp = new Date().toLocaleString("en-NZ")
   }
 }
 
