@@ -5,7 +5,7 @@
       v-on:input="editNote"
       class="form-control"
       placeholder="Please click + or select an existing note."
-      rows="55"
+      rows="30"
     ></textarea>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
 <style type="text/css">
 #note-editor {
   padding: 0;
+  padding-bottom: 40px;
 }
 
 textarea {

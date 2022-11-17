@@ -1,5 +1,5 @@
 <template>
-  <div id="widget">
+  <div>
     <a
       id="weather"
       class="weatherwidget-io"
