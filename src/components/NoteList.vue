@@ -131,6 +131,7 @@ export default {
 .list-group-item-heading {
   font-weight: 300;
   font-size: 15px;
+  overflow-wrap: break-word;
 }
 
 .list-group-item.active {
