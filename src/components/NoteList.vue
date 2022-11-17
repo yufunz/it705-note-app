@@ -82,6 +82,7 @@ export default {
 .brand {
   font-size: 100px;
   margin: 20px 20px;
+  color: #003d54;
 }
 
 #notes-list {
